@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-const CodeProjects = () => {
+const About = () => {
   return(
-    <div className="code-projects">
-      <h1>Code</h1>
+    <div className="about">
+      <h1>About</h1>
     </div>
   )
 };
 
-export default CodeProjects;
+export default About;

@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './stylesheets/sidebar.scss';
 
-const contents = () => {
-  return [ 'code', 'writing' ].map(
-    ( route, index ) => <li key={ index}>{ route }</li>
+const paths = () => {
+  return [ 'code', 'writing', 'about' ].map(
+    ( route, index ) =>
+      <li className="link">
+        <Link key={ index} to={ route }>{ route }</Link>
+      </li>
   );
 };
 
@@ -14,9 +18,14 @@ const Sidebar = ( { expanded, setExpanded } ) => {
   return(
       <ul
         className={ 'sidebar ' + sidebarClass( expanded ) }
-        onClick={ () => setExpanded( !expanded ) }
-        >
-      { contents() }
+        onClick={
+          ( event ) => {
+            if ( event.target.classList[ 0 ] ==='sidebar' ) {
+              setExpanded( !expanded )
+            }
+          }
+        }>
+      { paths() }
     </ul>
   );
 };
