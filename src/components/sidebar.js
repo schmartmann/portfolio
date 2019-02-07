@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import './stylesheets/sidebar.scss';
 
 const contents = () => {
-  return 'sidebar'.split( '' ).map(
-    ( letter, index ) => <li key={ index}>{ letter }</li>
+  return [ 'code', 'writing' ].map(
+    ( route, index ) => <li key={ index}>{ route }</li>
   );
 };
 
 
 const sidebarClass = ( expanded ) => expanded ? 'expanded' : 'collapsed';
 
-const Sidebar = ( { expanded, toggleSidebar } ) => {
+const Sidebar = ( { expanded, setExpanded } ) => {
   return(
       <ul
         className={ 'sidebar ' + sidebarClass( expanded ) }
-        onClick={ toggleSidebar }
+        onClick={ () => setExpanded( !expanded ) }
         >
       { contents() }
     </ul>
