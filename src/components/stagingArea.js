@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import './stagingArea.scss';
 
-const componentClass = ( expanded ) => expanded ? ' expanded' : '';
-
+const stagingAreaClass = ( expanded ) => expanded ? ' expanded' : '';
 
 const StagingArea = ( { children, expanded } ) => {
   console.log( expanded )
   return(
-    <div className={ "component" + componentClass( expanded ) }>
+    <div className={ "component" + stagingAreaClass( expanded ) }>
       { children }
     </div>
   )

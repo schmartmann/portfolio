@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './app.scss';
 
 import Sidebar from '../components/sidebar';
-import StagingArea from '../app/stagingArea';
+import StagingArea from '../components/stagingArea';
 
 import Landing from '../landing/landing';
 

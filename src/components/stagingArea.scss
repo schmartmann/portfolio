@@ -1,0 +1,14 @@
+.component {
+  background: green;
+  width: 89%;
+  min-height: 250px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: width 0.5s linear;
+
+  &.expanded {
+    width: 95%;
+  }
+}
