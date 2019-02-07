@@ -6,6 +6,8 @@ import Sidebar from '../components/sidebar';
 import StagingArea from '../components/stagingArea';
 
 import Landing from '../landing/landing';
+import CodeProjects from '../code/codeProjects';
+import WritingProjects from '../writing/writingProjects';
 
 class App extends Component {
   state = { sidebarExpanded: true }
@@ -25,6 +27,8 @@ class App extends Component {
           <Sidebar expanded={ sidebarExpanded } toggleSidebar={ this.toggleSidebar.bind( this ) }/>
           <StagingArea expanded={ !sidebarExpanded }>
             <Route path="/" exact component={ Landing }/>
+            <Route path="/code" exact component={ CodeProjects }/>
+            <Route path="/writing" exact component={ WritingProjects }/>
           </StagingArea>
         </div>
       </Router>
