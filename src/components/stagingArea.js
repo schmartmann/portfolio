@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './stagingArea.scss';
+import './stylesheets/stagingArea.scss';
 
 const StagingArea = ( { children, expanded } ) => {
   return(
