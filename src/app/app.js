@@ -8,8 +8,9 @@ import StagingArea from '../components/stagingArea';
 import Landing from '../landing/landing';
 import CodeProjects from '../code/codeProjects';
 import WritingProjects from '../writing/writingProjects';
+import About from '../about/about';
 
-const Portfolio = () => {
+const App = () => {
   const [ expanded, setExpanded ] = useState( true );
 
    return(
@@ -20,10 +21,11 @@ const Portfolio = () => {
           <Route path="/" exact component={ Landing }/>
           <Route path="/code" exact component={ CodeProjects }/>
           <Route path="/writing" exact component={ WritingProjects }/>
+          <Route path="/about" exact component={ About }/>
         </StagingArea>
       </div>
     </Router>
   );
 };
 
-export default Portfolio;
+export default App;
