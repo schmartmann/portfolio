@@ -1,22 +1,31 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './stylesheets/sidebar.scss';
 
-const contents = () => {
-  return 'sidebar'.split( '' ).map(
-    ( letter, index ) => <li key={ index}>{ letter }</li>
+const paths = () => {
+  return [ 'code', 'writing', 'about' ].map(
+    ( route, index ) =>
+      <li className="link">
+        <Link key={ index} to={ route }>{ route }</Link>
+      </li>
   );
 };
 
 
 const sidebarClass = ( expanded ) => expanded ? 'expanded' : 'collapsed';
 
-const Sidebar = ( { expanded, toggleSidebar } ) => {
+const Sidebar = ( { expanded, setExpanded } ) => {
   return(
       <ul
         className={ 'sidebar ' + sidebarClass( expanded ) }
-        onClick={ toggleSidebar }
-        >
-      { contents() }
+        onClick={
+          ( event ) => {
+            if ( event.target.classList[ 0 ] ==='sidebar' ) {
+              setExpanded( !expanded )
+            }
+          }
+        }>
+      { paths() }
     </ul>
   );
 };

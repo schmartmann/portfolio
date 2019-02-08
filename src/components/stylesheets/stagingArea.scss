@@ -1,6 +1,6 @@
 .component {
   background: green;
-  width: 89%;
+  width: 90%;
   min-height: 250px;
   height: 100%;
   position: absolute;
@@ -9,6 +9,6 @@
   transition: width 0.5s linear;
 
   &.expanded {
-    width: 95%;
+    width: 99%;
   }
 }
