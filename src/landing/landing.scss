@@ -1,0 +1,28 @@
+.landing {
+  height: auto;
+  width: auto;
+
+  section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+
+    h1 {
+      position: relative;
+      top: 100px;
+      left: 45px;
+      color: white;
+    }
+
+    .avatar {
+      height: 150px;
+      width: 150px;
+      background: url(/img/avatar.png);
+      background-position: center;
+      background-size: contain;
+      border-radius: 50%;
+  }
+  }
+}

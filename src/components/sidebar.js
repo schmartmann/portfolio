@@ -5,8 +5,8 @@ import './stylesheets/sidebar.scss';
 const paths = () => {
   return [ 'code', 'writing', 'about' ].map(
     ( route, index ) =>
-      <li className="link">
-        <Link key={ index} to={ route }>{ route }</Link>
+      <li  key={ index } className="link">
+        <Link to={ route }>{ route }</Link>
       </li>
   );
 };
